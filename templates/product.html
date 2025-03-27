@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}{{ product.name }} - Click & Cart{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white p-6 rounded-md shadow-md">
+    <img src="{{ product.image }}" alt="{{ product.name }}" class="w-full h-64 object-cover rounded-md">
+    <h1 class="text-3xl font-bold mt-4">{{ product.name }}</h1>
+    <p class="text-gray-600 mt-2">${{ product.price }}</p>
+    <p class="mt-4">{{ product.description }}</p>
+    <button class="mt-4 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-500 w-full">Add to Cart</button>
+</div>
+{% endblock %}

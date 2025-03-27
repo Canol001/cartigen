@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click & Cart</title>
-</head>
-<body>
-    <h1>Welcome to Click & Cart!</h1>
-</body>
-</html>
+{% extends 'layouts/base.html' %}
+
+{% block title %}Home - Click & Cart{% endblock %}
+
+{% block content %}
+<header class="bg-green-600 text-white py-16 text-center">
+    <h1 class="text-4xl font-bold">Welcome to Click & Cart</h1>
+    <p class="mt-2 text-lg">Find the best products at unbeatable prices!</p>
+    <a href="/shop" class="mt-4 inline-block bg-white text-green-600 px-6 py-2 rounded-md hover:bg-gray-200">Shop Now</a>
+</header>
+
+<section class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-center text-gray-700">Featured Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+        <div class="bg-white p-4 shadow-md rounded-md">
+            <img src="static/images/smartphone.jpg" alt="Product" class="w-full h-40 object-cover rounded-md">
+            <h3 class="text-lg font-bold mt-2">Product Name</h3>
+            <p class="text-gray-600">$49.99</p>
+            <button class="mt-3 bg-green-600 text-white px-4 py-1 rounded-md hover:bg-green-500 w-full">Add to Cart</button>
+        </div>
+    </div>
+</section>
+{% endblock %}

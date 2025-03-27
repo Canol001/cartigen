@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Cart - Click & Cart{% endblock %}
+
+{% block content %}
+<h1 class="text-3xl font-bold text-center">Your Cart</h1>
+{% for item in cart_items %}
+<div class="bg-white p-4 shadow-md rounded-md mt-4 flex justify-between">
+    <p>{{ item.name }} - ${{ item.price }}</p>
+    <a href="/remove-from-cart/{{ item.id }}" class="text-red-500 hover:underline">Remove</a>
+</div>
+{% endfor %}
+<a href="/checkout" class="mt-6 block text-center bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-500">Proceed to Checkout</a>
+{% endblock %}

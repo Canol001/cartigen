@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Checkout - Click & Cart{% endblock %}
+
+{% block content %}
+<h1 class="text-3xl font-bold text-center">Checkout</h1>
+<form class="bg-white p-6 rounded-md shadow-md max-w-lg mx-auto mt-6">
+    <input type="text" placeholder="Full Name" class="block w-full px-4 py-2 border rounded-md mb-4">
+    <input type="text" placeholder="Shipping Address" class="block w-full px-4 py-2 border rounded-md mb-4">
+    <button class="bg-green-600 text-white px-6 py-2 rounded-md w-full">Place Order</button>
+</form>
+{% endblock %}
