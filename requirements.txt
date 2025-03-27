@@ -1,1 +1,14 @@
- 
+Flask
+gunicorn
+Flask-SQLAlchemy
+psycopg2-binary  # Required for PostgreSQL, remove if using SQLite
+Flask-WTF
+bcrypt
+cryptography>=41.0.0
+orjson>=3.9.0
+python-dotenv  # For loading environment variables from a .env file
+requests  # If you need to make HTTP requests
+Werkzeug>=2.0.0  # Ensures compatibility with Flask
+Jinja2>=3.0  # Template rendering
+click>=8.0  # Flask CLI support
+itsdangerous>=2.0.0  # Security-related utilities
